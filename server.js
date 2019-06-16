@@ -32,7 +32,7 @@ app.use(express.static("public"));
 // mongoose.connect("mongodb://localhost/newsdb", { useNewUrlParser: true });
 //Configure Mongo
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsdb";
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 // Routes
 
 // A GET route for scraping the echoJS website
