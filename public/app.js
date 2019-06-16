@@ -70,3 +70,20 @@
 //   $("#titleinput").val("");
 //   $("#bodyinput").val("");
 // });
+
+// $(".notesBtn").click(function() {
+//     event.preventDefault();
+//     $(".notesOverlay").css("display","block");
+// });
+function showNotes() {
+    var dataState = $(".notesBtn").attr("data-state");
+    if (dataState === "0") {
+        $(".notesOverlay").css("display","block");
+        $(".notesBtn").attr("data-state","1");
+        $(".notesBtn").text("Hide Notes");
+    } else {
+        $(".notesOverlay").css("display","none");
+        $(".notesBtn").attr("data-state","0");
+        $(".notesBtn").text("Show Notes");
+    }
+}

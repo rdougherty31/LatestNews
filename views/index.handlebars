@@ -1,15 +1,16 @@
 <h1>Latest News</h1>
+        <button class="notesBtn" onClick="showNotes()" data-state="0">Show Notes</button>
 <ul>
     {{#each article}}
     <li>
         <div>{{title}}</div>
         <div>{{link}}</div>
-        <div>Notes: {{note}}</div>
+        <div class="notesOverlay">
+    <div class="notes">
+        <div>Notes</div>
+        <div>{{note}}</div>
+    </div>
+</div>
     </li>
     {{/each}}
 </ul>
-<div class="notesOverlay">
-    <div class="notes">
-
-    </div>
-</div>

@@ -21,9 +21,10 @@ ul {
     width: 100%;
     position: absolute;
     overflow: scroll;
-    background: rgba(255,255,255,0.65);
+    background: rgba(255, 255, 255, 0.8);
     border-top: 3px solid black;
     border-bottom: 3px solid black;
+    font-weight: bold;
 }
 ul::-webkit-scrollbar {
     display: none;
@@ -35,16 +36,41 @@ li {
     font-family: courier;
     padding: .5rem;
 }
+li div:first-child {
+    color: red;
+    font-family: arial;
+    font-size: 1.5rem;
+    padding: .25rem;
+}
+li div:last-child {
+    color: #fff;
+}
+li:hover {
+    background: #fff;
+}
+.notesBtn {
+    width: 10%;
+    height: 3rem;
+    margin: 1% 45% 1% 45%;
+}
 .notes {
     height: 15rem;
-    background: rgba(255,255,255,.8);
+    background:#fec706;
     margin: 0 auto;
     position: relative;
     z-index: 5;
-    width: 40%;
-    height: 33.5rem;
+    width: 30%;
+    height: 8rem;
+}
+.notes div:first-child {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #000;
+    letter-spacing: 1mm;
+}
+.notes div:last-child {
+    font-family:serif;
+    font-style: italic;
 }
 .notesOverlay {
-    background: black;
     display: none;
 }
