@@ -2,7 +2,6 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var exphbs = require("express-handlebars");
-var path = require("path");
 
 // For scraping
 var axios = require("axios");
@@ -12,6 +11,10 @@ var cheerio = require("cheerio");
 var db = require("./models");
 
 var PORT = process.env.PORT || 8080;
+
+//Configure Mongo
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsdb";
+mongoose.connect(MONGODB_URI);
 
 // Initialize Express
 var app = express();
@@ -43,7 +46,7 @@ app.get("/scrape", function(req, res) {
     var $ = cheerio.load(response.data);
 
     // Now, we grab every h2 within an article tag, and do the following:
-    $("article h2").each(function(i, element) {
+    $("article h2").each(function() {
       // Save an empty result object
       var result = {};
 
