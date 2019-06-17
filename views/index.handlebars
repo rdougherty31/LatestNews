@@ -3,9 +3,11 @@
 <ul>
     {{#each article}}
     <li>
-        <div>{{title}}</div>
-        <div>{{link}}</div>
-        <div class="notesOverlay">
+        <a href={{link}} target="_blank">
+            <div>{{title}}</div>
+            <div>[ {{link}} ]</div>
+            <div class="notesOverlay">
+        </a>
     <div class="notes">
         <div>Notes</div>
         <div>{{note}}</div>

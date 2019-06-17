@@ -1,14 +1,14 @@
 h1 {
     text-align: center;
     font-size: 5rem;
-    margin: 1rem;
+    color: white;
+    text-shadow: 0 0 2px red;
+    border-left: 1px solid #dee6ed;
+    border-right: 1px solid #dee6ed;
+    width: 35%;
+    margin: 1% auto;
+    padding: 0 1%;
 }
-/* body, html {
-    background-color: #c8c8c8;
-    background-image: url("../images/newspaper.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-} */
 html {
     background-color: #c8c8c8;
     background-image: url("../images/newspaper.jpg");
@@ -22,8 +22,8 @@ ul {
     position: absolute;
     overflow: scroll;
     background: rgba(255, 255, 255, 0.8);
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    border-top: 3px solid #dee6ed;
+    border-bottom: 3px solid #dee6ed;
     font-weight: bold;
 }
 ul::-webkit-scrollbar {
@@ -39,11 +39,15 @@ li {
 li div:first-child {
     color: red;
     font-family: arial;
-    font-size: 1.5rem;
-    padding: .25rem;
+    font-size: 1.25rem;
+    padding: .5rem;
+    font-weight: lighter;
 }
-li div:last-child {
-    color: #fff;
+li:first-of-type {
+    border-top: none;
+}
+li:last-of-type {
+    border-bottom: none;
 }
 li:hover {
     background: #fff;
@@ -51,11 +55,24 @@ li:hover {
 .notesBtn {
     width: 10%;
     height: 3rem;
-    margin: 1% 45% 1% 45%;
+    margin: .5% 45% 1% 45%;
+    border-radius: .2rem;
+    box-shadow: 0 0 2rem #fafeff;
+    border: none;
+    background: #2b5175;
+    color: #dee6ed;
+    font-family: courier;
+    font-size: 1rem;
+}
+.notesBtn:hover {
+    background: #dee5ed;
+    color: #2b5175;
+    box-shadow: 0 0 2rem #2b5175;
+    border-radius: 3rem;
 }
 .notes {
     height: 15rem;
-    background:#fec706;
+    background:#ffe897;
     margin: 0 auto;
     position: relative;
     z-index: 5;
@@ -64,13 +81,21 @@ li:hover {
 }
 .notes div:first-child {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #000;
+    color: #6d737d;
     letter-spacing: 1mm;
+    font-weight: 100;
+    margin-bottom: 3%;
 }
 .notes div:last-child {
-    font-family:serif;
-    font-style: italic;
+    font-size: 1rem;
+    font-family: arial;
+    font-weight: 100;
+    color: black;
 }
 .notesOverlay {
     display: none;
+}
+a {
+    color: black;
+    text-decoration: none;
 }
