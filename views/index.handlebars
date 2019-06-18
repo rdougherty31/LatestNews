@@ -1,18 +1,19 @@
 <h1>Latest News</h1>
         <button class="notesBtn" onClick="showNotes()" data-state="0">Show Notes</button>
-<ul>
+<ul id="articles">
     {{#each article}}
-    <li>
+    <li class={{_id}}>
         <a href={{link}} target="_blank">
-            <div>{{title}}</div>
-            <div>[ {{link}} ]</div>
-            <div class="notesOverlay">
+            <div class="title">{{title}}</div>
+            <div class="url"><span>[</span> {{link}} <span>]</span></div>
         </a>
-    <div class="notes">
-        <div>Notes</div>
-        <div>{{note}}</div>
-    </div>
-</div>
+        <div class="notesOverlay">
+            <div class="notes">
+                <div>Notes</div>
+                <div>{{note}}</div>
+                <button class="deleteNote" data-id={{_id}} onclick="deleteNote()">Delete Note</button>
+            </div>
+        </div>
     </li>
     {{/each}}
 </ul>

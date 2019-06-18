@@ -30,8 +30,7 @@ ul::-webkit-scrollbar {
     display: none;
 }
 li {
-    border-top: 1px solid black;
-    /* height: 5rem; */
+    border-top: 1px double #dee6ed;
     text-align: center;
     font-family: courier;
     padding: .5rem;
@@ -51,6 +50,9 @@ li:last-of-type {
 }
 li:hover {
     background: #fff;
+}
+.url span {
+    color: red;
 }
 .notesBtn {
     width: 10%;
@@ -81,7 +83,7 @@ li:hover {
 }
 .notes div:first-child {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #6d737d;
+    color: #2b5175;
     letter-spacing: 1mm;
     font-weight: 100;
     margin-bottom: 3%;
