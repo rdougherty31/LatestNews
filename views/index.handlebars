@@ -1,3 +1,4 @@
+<div id="addNote">
 <h1>Latest News</h1>
         <button class="notesBtn" onClick="showNotes()" data-state="0">Show Notes</button>
 <ul id="articles">
@@ -10,10 +11,19 @@
         <div class="notesOverlay">
             <div class="notes">
                 <div>Notes</div>
-                <div>{{note}}</div>
-                <button class="deleteNote" data-id={{_id}} onclick="deleteNote()">Delete Note</button>
+                <p>{{note}}</p>
+                <button class="addNote" data-id={{_id}} onclick="addNote()">Add Note</button>
+                <button class="deleteNote" data-id={{_id}}>Delete Note</button>                
             </div>
         </div>
     </li>
     {{/each}}
 </ul>
+    <div id="addNoteWrapper">
+        <label for="noteTitle">Title</label>
+        <input type="text" id="titleinput" name="noteTitle">
+        <label for="noteBody">Note:</label>
+        <input type="text" id="bodyinput" name="noteBody">
+        <button id="addNoteBtn">Add Note</button>
+    </div>
+</div>
