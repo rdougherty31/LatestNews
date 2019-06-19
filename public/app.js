@@ -2,8 +2,8 @@
 $(document).on("click", ".deleteNote", function () {
     // Save the note's id which is connected to the delete button
     var thisId = $(this).attr("data-id");
-    console.log("This ID is: " + thisId);
-    
+    $("p").attr("data-id", thisId).html("");
+
     $.ajax({
         method: "DELETE",
         url: "/articles/delete/" + thisId,
@@ -11,7 +11,6 @@ $(document).on("click", ".deleteNote", function () {
     }).then(function (data) {
         console.log(data);
         console.log("note deleted");
-        $("p").attr("data-id", thisId).html("");
     });
 });
 
